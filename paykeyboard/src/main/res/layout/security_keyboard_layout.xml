@@ -42,7 +42,7 @@
         android:textColor="@color/cancel_text_color"
         android:textSize="18sp" />
 
-    <com.hzy.paykeyboard.PasswordLayout
+    <com.funion.paykeyboard.PasswordLayout
         android:id="@+id/password_input_layout"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -70,7 +70,7 @@
         android:layout_marginTop="12dp"
         android:background="@android:color/white">
 
-        <com.hzy.paykeyboard.KeyPanelLayout
+        <com.funion.paykeyboard.KeyPanelLayout
             android:id="@+id/password_key_panel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

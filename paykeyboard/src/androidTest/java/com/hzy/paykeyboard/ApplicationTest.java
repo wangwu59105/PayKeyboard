@@ -1,4 +1,4 @@
-package com.hzy.paykeyboard;
+package com.funion.paykeyboard;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
