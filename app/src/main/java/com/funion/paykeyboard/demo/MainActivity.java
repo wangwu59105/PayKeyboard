@@ -1,12 +1,12 @@
-package com.hzy.paykeyboard.demo;
+package com.funion.paykeyboard.demo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.hzy.paykeyboard.IPasswordCallback;
-import com.hzy.paykeyboard.PayKeyboard;
+import com.funion.paykeyboard.IPasswordCallback;
+import com.funion.paykeyboard.PayKeyboard;
 
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener, IPasswordCallback {
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity
         findViewById(R.id.show_keyboard).setOnClickListener(this);
         mPayKeyboard = new PayKeyboard(this);
         mPayKeyboard.setPasswordCallback(this);
+        mPayKeyboard.setDotEnabled(false);
     }
 
     @Override
