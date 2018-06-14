@@ -72,6 +72,9 @@ public class PayComponentLayout extends FrameLayout
         return mForgetButton;
     }
 
+    public KeyPanelLayout getmPasswordPanel() {
+        return mPasswordPanel;
+    }
 
     /**
      * 一些子控件点击事件

@@ -135,6 +135,12 @@ public class PayKeyboard extends PopupWindow
         mWindowLayout.getForgetButton().setText(resid);
     }
 
+    public void setDotEnabled(boolean dotEnabled) {
+        mWindowLayout.getmPasswordPanel().setmDotEnabled(dotEnabled);
+    }
+
+
+
     /**
      * 清楚该会话缓存的密码以及UI组建还原
      */

@@ -25,6 +25,8 @@ public class KeyPanelLayout extends FrameLayout implements View.OnClickListener 
     private IKeyEventListener mKeyboardListener;
     private boolean mDotEnabled = false;
 
+    private ViewGroup dotViewGroup;
+
     public KeyPanelLayout(Context context) {
         super(context);
         initViews(context);
@@ -39,6 +41,20 @@ public class KeyPanelLayout extends FrameLayout implements View.OnClickListener 
     public KeyPanelLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
+    }
+
+    public void setmDotEnabled(boolean mDotEnabled) {
+        this.mDotEnabled = mDotEnabled;
+        if (null != dotViewGroup) {
+            dotViewGroup.setClickable(mDotEnabled);
+            dotViewGroup.setEnabled(mDotEnabled);
+            TextView buttonText = (TextView) dotViewGroup.findViewById(R.id.button_text);
+            if (mDotEnabled) {
+                buttonText.setText(".");
+            } else {
+                buttonText.setText("");
+            }
+        }
     }
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -79,6 +95,7 @@ public class KeyPanelLayout extends FrameLayout implements View.OnClickListener 
             return;
         }
         if (keyText.equals(".")) {
+            dotViewGroup = viewGroup;
             viewGroup.setBackgroundResource(R.drawable.keyboard_gray_button);
             if (!mDotEnabled) {
                 viewGroup.setClickable(false);
