@@ -18,7 +18,7 @@ public class PayComponentLayout extends FrameLayout
     private PasswordLayout mPasswordInputLayout;
     private KeyPanelLayout mPasswordPanel;
     private View mCancelButton;
-    private View mForgetButton;
+    private TextView mForgetButton;
     private IKeyEventListener mKeyboardListener;
 
     private TextView mMainTitle;
@@ -53,7 +53,7 @@ public class PayComponentLayout extends FrameLayout
         mPasswordInputLayout = (PasswordLayout) root.findViewById(R.id.password_input_layout);
         mPasswordPanel = (KeyPanelLayout) root.findViewById(R.id.password_key_panel);
         mCancelButton = root.findViewById(R.id.password_input_cancel);
-        mForgetButton = root.findViewById(R.id.password_input_forget);
+        mForgetButton = (TextView)root.findViewById(R.id.password_input_forget);
         mMainTitle = (TextView) root.findViewById(R.id.password_input_main_title);
         mSubTitle = (TextView) root.findViewById(R.id.password_input_sub_title);
         mPasswordPanel.setKeyboardListener(this);
@@ -66,6 +66,12 @@ public class PayComponentLayout extends FrameLayout
     public TextView getSubTitle() {
         return mSubTitle;
     }
+
+
+    public TextView getForgetButton() {
+        return mForgetButton;
+    }
+
 
     /**
      * 一些子控件点击事件

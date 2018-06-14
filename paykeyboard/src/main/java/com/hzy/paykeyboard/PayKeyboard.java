@@ -126,6 +126,15 @@ public class PayKeyboard extends PopupWindow
         mWindowLayout.getSubTitle().setText(resid);
     }
 
+
+    public void setForgetTitle(CharSequence text) {
+        mWindowLayout.getForgetButton().setText(text);
+    }
+
+    public void setForgetTitle(@StringRes int resid) {
+        mWindowLayout.getForgetButton().setText(resid);
+    }
+
     /**
      * 清楚该会话缓存的密码以及UI组建还原
      */
